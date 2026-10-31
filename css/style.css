@@ -1,0 +1,488 @@
+/* =========================
+   ONYRO — DESIGN VARIABLES
+========================= */
+
+:root {
+  --background: #111713;
+  --surface: #202720;
+  --green: #00B85A;
+  --green-light: #B6F36B;
+
+  --paper: #E9E9E4;
+  --ink: #17191C;
+  --muted: #858B91;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, sans-serif;
+  color: var(--paper);
+}
+
+/* =========================
+   OUTER CANVAS
+========================= */
+
+.canvas {
+  min-height: 100vh;
+  position: relative;
+  padding: 30px 5%;
+  overflow: hidden;
+}
+
+.outer-header,
+.outer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+
+  color: var(--muted);
+}
+
+.outer-header {
+  margin-bottom: 40px;
+}
+
+.outer-footer {
+  margin-top: 40px;
+}
+
+/* =========================
+   FLOATING ELEMENTS
+========================= */
+
+.floating-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-card {
+  position: absolute;
+  width: 190px;
+  padding: 15px;
+
+  background: var(--surface);
+  border: 1px solid #465047;
+  border-radius: 8px;
+}
+
+.floating-card span {
+  display: block;
+  color: var(--green-light);
+  font-family: monospace;
+  font-size: 9px;
+  margin-bottom: 12px;
+}
+
+.floating-card p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.note-one {
+  top: 23%;
+  left: 3%;
+}
+
+.note-two {
+  top: 35%;
+  right: 3%;
+}
+
+.note-three {
+  bottom: 12%;
+  left: 2%;
+}
+
+.floating-art {
+  position: absolute;
+  color: var(--green);
+  font-size: 55px;
+}
+
+.art-one {
+  top: 15%;
+  right: 12%;
+}
+
+.art-two {
+  bottom: 15%;
+  right: 10%;
+}
+
+/* =========================
+   CENTRAL BROWSER
+========================= */
+
+.browser-window {
+  position: relative;
+  z-index: 2;
+
+  width: min(850px, 75%);
+  margin: 0 auto;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  border: 2px solid #424942;
+  border-radius: 12px;
+
+  overflow: hidden;
+  box-shadow: 0 25px 80px #00000055;
+}
+
+.browser-header {
+  height: 42px;
+  background: #D8DAD3;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 0 15px;
+  border-bottom: 1px solid #B6B9B1;
+}
+
+.browser-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-controls span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.browser-address {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+}
+
+.browser-version {
+  font-family: monospace;
+  font-size: 10px;
+}
+
+/* =========================
+   WEBSITE CONTENT
+========================= */
+
+.website-content {
+  padding: 25px 6%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand img {
+  width: 115px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+
+.nav-links a {
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 1px;
+  font-size: 10px;
+
+  text-decoration: none;
+}
+
+.nav-links img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 100px 0;
+}
+
+.eyebrow {
+  font-family: monospace;
+  font-size: 10px;
+  margin-bottom: 25px;
+  color: #777;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 85px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--green);
+}
+
+.hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.hero-avatar {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 25%;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.hero-info p {
+  margin: 0;
+}
+
+.explore-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+/* =========================
+    Toolkit Settings
+=========================== */
+
+.toolkit {
+  padding: 35px 0;
+  border-top: 1px solid #C8C9C1;
+}
+
+.toolkit-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolkit-heading h2 {
+  font-size: 28px;
+  color: #17191C;
+}
+
+.toolkit-heading span {
+  font-family: monospace;
+  font-size: 9px;
+  color: #777;
+}
+
+.toolkit-description {
+  font-size: 12px;
+  color: #777;
+  margin: 12px 0 22px;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+  border-radius: 50px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: transform 0.2s ease;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: translateY(-4px);
+}
+
+.skill.green {
+  background: #00B85A;
+  color: white;
+}
+
+.skill.dark {
+  background: #17191C;
+  color: white;
+}
+
+.skill.light {
+  background: #D5D9D0;
+  color: #17191C;
+}
+
+.green-text {
+  color: #00B85A;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.work-section,
+.about-section,
+.contact-section {
+  padding: 60px 0;
+  border-top: 1px solid #C8C9C1;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-heading h2,
+.about-section h2,
+.contact-section h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-image {
+  aspect-ratio: 4 / 3;
+  background: #D1D5CC;
+  display: grid;
+  place-items: center;
+  color: #777;
+  font-family: monospace;
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.project-card p {
+  color: #777;
+  font-size: 11px;
+}
+
+.about-section p {
+  max-width: 500px;
+  font-size: 19px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.contact-section a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--green);
+}
+
+.website-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 9px;
+  color: #777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .canvas {
+    padding: 20px 4%;
+  }
+
+  .outer-header,
+  .outer-footer {
+    font-size: 8px;
+  }
+
+  .browser-window {
+    width: 100%;
+  }
+
+  .website-content {
+    padding: 20px 5%;
+  }
+
+  .main-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-card,
+  .floating-art {
+    display: none;
+  }
+
+}
